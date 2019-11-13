@@ -1,25 +1,38 @@
 {
-    "name": "schema-language-support",
-    "displayName": "Schema Language Support",
-    "description": "Language support for the Schema language",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.40.0"
-    },
-    "categories": [
-        "Programming Languages"
+  "name": "schema-language-support",
+  "displayName": "Schema Language Support",
+  "description": "Language support for the Schema language",
+  "publisher": "schemac",
+  "repository": {
+    "url": "https://github.com/jhbertra/schemac-language-support"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.40.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "schema",
+        "aliases": [
+          "Schema",
+          "schema"
+        ],
+        "extensions": [
+          ".schema"
+        ],
+        "configuration": "./language-configuration.json"
+      }
     ],
-    "contributes": {
-        "languages": [{
-            "id": "schema",
-            "aliases": ["Schema", "schema"],
-            "extensions": [".schema"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "schema",
-            "scopeName": "source.schema",
-            "path": "./syntaxes/schema.tmLanguage.json"
-        }]
-    }
+    "grammars": [
+      {
+        "language": "schema",
+        "scopeName": "source.schema",
+        "path": "./syntaxes/schema.tmLanguage.json"
+      }
+    ]
+  }
 }
